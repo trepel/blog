@@ -37,7 +37,7 @@
     <extension qualifier="webdriver">
         <property name="browserCapabilities">${browser}</property>
         <!-- ARQ-1048 these properties are not used at all for RemoteWebDriver -->
-        <property name="firefoxBinary">/opt/firefox-9.0.1/firefox-bin</property>
+        <property name="firefoxBinary">/usr/bin/firefox</property>
         <property name="chromeBinary">/opt/google/chrome/chrome</property>
         <property name="chromeSwitches">--user-data-dir=/tmp --disable-web-security</property>
     </extension>
