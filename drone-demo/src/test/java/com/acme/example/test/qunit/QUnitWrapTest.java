@@ -13,6 +13,7 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
@@ -31,6 +32,7 @@ import com.acme.example.test.Deployments;
 import com.google.common.base.Function;
 
 @RunWith(Arquillian.class)
+@Ignore
 public class QUnitWrapTest {
 
     private static final String QUNIT_SRC = "src/test/qunit";
