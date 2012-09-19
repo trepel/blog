@@ -265,6 +265,31 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <echo>Displaying 3 environment variables</echo>
+                                <echo>[M2_HOME] ${env.M2_HOME}</echo>
+                                <echo>[Path] ${env.Path}</echo>
+                                <echo>[PATH] ${env.PATH}</echo>
+                                <echo>[JAVA_HOME] ${JAVA_HOME}</echo>
+                                <exec failonerror="true" executable="javac"> 
+                                  <arg value="-version" /> 
+                               </exec> 
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
